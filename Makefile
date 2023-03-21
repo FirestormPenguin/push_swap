@@ -8,12 +8,11 @@ OBJ		= $(SRC:.c=.o)
 .o:.c
 	$(CC) $(FLAGS) -c $< -o ${<:.c=.o}
 $(NAME):	${OBJ}
-	@ar rcs $(NAME) $(OBJ)
+	@ar -r $(NAME) $(OBJ)
 all:	$(NAME)
 
 clean:
 	@rm -f $(OBJ)
-	@make fclean -C libft
 fclean:	clean
 	@rm -f $(NAME)
 re:	fclean all
