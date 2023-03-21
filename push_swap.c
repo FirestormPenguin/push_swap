@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:35:46 by egiubell          #+#    #+#             */
-/*   Updated: 2023/03/21 17:15:19 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/03/21 18:16:28 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ int main ()
 	head = head->next;
 
 	
-	while( != NULL)
-	{
-		printf ("A:\n%d\n", vars.a);
-		printf ("B:\n%d\n", vars.b);
-	}
+	//while( != NULL)
+	//{
+	//	printf ("A:\n%d\n", vars.a);
+	//	printf ("B:\n%d\n", vars.b);
+	//}
 	
 	return (0);
 }
