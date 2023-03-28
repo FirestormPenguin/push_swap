@@ -6,15 +6,18 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:35:46 by egiubell          #+#    #+#             */
-/*   Updated: 2023/03/28 13:51:32 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/03/28 14:37:33 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main ()
+int main (int ac, char **av)
 {
+	int	*stack_a;
+	int	*stack_b;
 	
 	
+
 	return (0);
 }
