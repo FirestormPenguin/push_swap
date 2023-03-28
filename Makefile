@@ -8,8 +8,7 @@ OBJ		= $(SRC:.c=.o)
 .o:.c
 	$(CC) $(FLAGS) -c $< -o ${<:.c=.o}
 $(NAME):	${OBJ}
-	@make -C libft libft.a
-	@cp libft/libft.a ./push_swap.a
+	@cp ./push_swap.a
 	@ar rcs $(NAME) $(OBJ)
 all:	$(NAME)
 
