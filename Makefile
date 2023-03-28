@@ -1,21 +1,20 @@
-NAME	= push_swap.a
-SRC		= push_swap.c
+NAME	=	push_swap
 
-FLAGS	= -Wall -Werror -Wextra -I -g
-CC		= gcc
-OBJ		= $(SRC:.c=.o)
+SRCS	=	push_swap.c
 
-.o:.c
-	$(CC) $(FLAGS) -c $< -o ${<:.c=.o}
-$(NAME):	${OBJ}
-	@cp ./push_swap.a
-	@ar rcs $(NAME) $(OBJ)
+OBJS	=	$(SRCS:.c=.o)
+
+CCFLAGS	=	gcc -Wall -Wextra -Werror
+RM		=	rm -f
+
+$(NAME): 
+	$(CCFLAGS) $(SRCS) -o $(NAME)
+
 all:	$(NAME)
 
 clean:
-	@rm -f $(OBJ)
+			$(RM) $(OBJS)
 fclean:	clean
-	@rm -f $(NAME)
-re:	fclean all
-
-.PHONY:		all, clean, fclean, re
+			$(RM) $(NAME)
+re:		fclean all
+.PHONY: all clean fclean re
