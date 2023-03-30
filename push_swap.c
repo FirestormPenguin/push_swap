@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:35:46 by egiubell          #+#    #+#             */
-/*   Updated: 2023/03/30 19:19:43 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/03/30 19:54:40 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,24 +39,39 @@ int main (int ac, char **av)
 		j++;
 	}
 	j = 0;
-	while(j < stack->count_a)
+	printf("\n");
+	printf("A: ");
+	while(j < stack->current_a)
 	{
-		printf("%d	 \n", stack->stack_a[j]);
+		printf("%d ", stack->stack_a[j]);
 		j++;
 	}
-	printf("-	-\n");
-	printf("A:	B:\n");
-
-	sa(stack);
-
-	j = 0;
-	while(j < stack->count_a)
+	printf("\n");
+	printf("B: ");
+	while(j < stack->current_b)
 	{
-		printf("%d	 \n", stack->stack_a[j]);
+		printf("%d ",stack->stack_b[j]);
 		j++;
 	}
-	printf("-	-\n");
-	printf("A:	B:\n");
 	
+	pb(stack);
+	j = 0;
+	printf("\n");
+	printf("\n");
+	printf("A: ");
+	while(j < stack->current_a)
+	{
+		printf("%d ", stack->stack_a[j]);
+		j++;
+	}
+	printf("\n");
+	printf("B: ");
+	j = 0;
+	while(j < stack->current_b)
+	{
+		printf("%d ",stack->stack_b[j]);
+		j++;
+	}
+	printf("\n");
 	return (0);
 }
