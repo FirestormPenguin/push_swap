@@ -16,4 +16,5 @@ int		ft_count_av(char **str);
 int		sa(t_stack *stack);
 int		sb(t_stack *stack);
 int		ss(t_stack *stack);
+int		pa(t_stack *stack);
 int		pb(t_stack *stack);

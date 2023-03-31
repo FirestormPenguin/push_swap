@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:35:46 by egiubell          #+#    #+#             */
-/*   Updated: 2023/03/31 18:48:59 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/03/31 19:12:35 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int main (int ac, char **av)
 		j++;
 	}
 	
-	pb(stack);
+	pa(stack);
 	j = 0;
 	printf("\n");
 	printf("\n");
