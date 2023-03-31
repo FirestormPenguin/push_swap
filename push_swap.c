@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:35:46 by egiubell          #+#    #+#             */
-/*   Updated: 2023/03/30 19:54:40 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/03/31 18:48:59 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int main (int ac, char **av)
 	j = 0;
 	stack = malloc(sizeof(t_stack));
 	stack->count_a = ft_count_av(av);
+	stack->count_b = stack->count_a;
 	printf("Numeri inseriti nella stack: %d\n\n", stack->count_a);
 	
 	if(ac <= 2)
