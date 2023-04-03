@@ -19,3 +19,8 @@ int		ss(t_stack *stack);
 int		pa(t_stack *stack);
 int		pb(t_stack *stack);
 int		ra(t_stack *stack);
+int		rb(t_stack *stack);
+int		rr(t_stack *stack);
+int		rra(t_stack *stack);
+int		rrb(t_stack *stack);
+int		rrr(t_stack *stack);

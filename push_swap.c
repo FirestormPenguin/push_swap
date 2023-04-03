@@ -55,7 +55,7 @@ int main (int ac, char **av)
 		j++;
 	}
 	
-	pb(stack);
+	rrr(stack);
 	j = 0;
 	printf("\n");
 	printf("\n");
