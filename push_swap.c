@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   push_sw.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/21 15:35:46 by egiubell          #+#    #+#             */
-/*   Updated: 2023/04/03 03:52:40 by codespace        ###   ########.fr       */
+/*   Created: 2023/04/03 06:26:55 by marvin            #+#    #+#             */
+/*   Updated: 2023/04/03 06:26:55 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int main (int ac, char **av)
 	stack->stack_b = (int *)malloc(sizeof(int) * stack->count_a);
 	stack->current_a = stack->count_a;
 	stack->current_b = 0;
-	while(*av[i] != '\0')
+	while(av[i] != '\0')
 	{
 		stack->stack_a[j] = ft_atoi(av[i]);
 		i++;
@@ -55,7 +55,7 @@ int main (int ac, char **av)
 		j++;
 	}
 	
-	/*pb(stack);
+	pa(stack);
 	j = 0;
 	printf("\n");
 	printf("\n");
@@ -74,6 +74,6 @@ int main (int ac, char **av)
 		j++;
 	}
 	printf("\n");
-	*/
+	
 	return (0);
 }

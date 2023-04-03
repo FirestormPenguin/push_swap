@@ -17,6 +17,8 @@ int	pa(t_stack *stack)
 	int i;
 
 	i = stack->current_a;
+	if(stack->current_a == 0)
+		return (0);
 	while(i > 0)
 	{
 		stack->stack_a[i] = stack->stack_a[i - 1];

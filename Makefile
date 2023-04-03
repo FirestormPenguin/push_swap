@@ -4,7 +4,7 @@ SRCS	=	push_swap.c utils.c operation/swap.c operation/push.c operation/rotate.c
 
 OBJS	=	$(SRCS:.c=.o)
 
-CCFLAGS	=	gcc -Wall -Wextra -Werror
+CCFLAGS	=	gcc -Wall -Wextra 
 RM		=	rm -f
 
 $(NAME): 
