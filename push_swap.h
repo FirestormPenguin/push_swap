@@ -13,6 +13,7 @@ typedef struct s_stack {
 
 int		ft_atoi(const char *str);
 int		ft_count_av(char **str);
+int		print_stack(t_stack *stack);
 int		sa(t_stack *stack);
 int		sb(t_stack *stack);
 int		ss(t_stack *stack);

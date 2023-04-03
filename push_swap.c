@@ -39,41 +39,6 @@ int main (int ac, char **av)
 		i++;
 		j++;
 	}
-	j = 0;
-	printf("\n");
-	printf("A: ");
-	while(j < stack->current_a)
-	{
-		printf("%d ", stack->stack_a[j]);
-		j++;
-	}
-	printf("\n");
-	printf("B: ");
-	while(j < stack->current_b)
-	{
-		printf("%d ",stack->stack_b[j]);
-		j++;
-	}
-	
-	rrr(stack);
-	j = 0;
-	printf("\n");
-	printf("\n");
-	printf("A: ");
-	while(j < stack->current_a)
-	{
-		printf("%d ", stack->stack_a[j]);
-		j++;
-	}
-	printf("\n");
-	printf("B: ");
-	j = 0;
-	while(j < stack->current_b)
-	{
-		printf("%d ",stack->stack_b[j]);
-		j++;
-	}
-	printf("\n");
-	
+	print_stack(stack);
 	return (0);
 }

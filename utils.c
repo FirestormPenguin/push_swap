@@ -50,3 +50,26 @@ int	ft_count_av(char **str)
 	}		
 	return (i-1);
 }
+
+int	print_stack(t_stack *stack)
+{
+	int i;
+
+	i = 0;
+	printf("A: ");
+	while(i < stack->current_a)
+	{
+		printf("%d ", stack->stack_a[i]);
+		i++;
+	}
+	printf("\n");
+	printf("B: ");
+	i = 0;
+	while(i < stack->current_b)
+	{
+		printf("%d ",stack->stack_b[i]);
+		i++;
+	}
+	printf("\n");
+	return (0);
+}
