@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:35:46 by egiubell          #+#    #+#             */
-/*   Updated: 2023/03/31 19:12:35 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/04/03 03:52:40 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main (int ac, char **av)
 
 	i = 1;
 	j = 0;
-	stack = malloc(sizeof(t_stack));
+	stack = (t_stack *)malloc(sizeof(t_stack));
 	stack->count_a = ft_count_av(av);
 	stack->count_b = stack->count_a;
 	printf("Numeri inseriti nella stack: %d\n\n", stack->count_a);
@@ -29,11 +29,11 @@ int main (int ac, char **av)
 	{
 		return (0);
 	}
-	stack->stack_a = malloc(sizeof(int) * stack->count_a);
-	stack->stack_b = malloc(sizeof(int) * stack->count_a);
+	stack->stack_a = (int *)malloc(sizeof(int) * stack->count_a);
+	stack->stack_b = (int *)malloc(sizeof(int) * stack->count_a);
 	stack->current_a = stack->count_a;
 	stack->current_b = 0;
-	while(av[i] != '\0')
+	while(*av[i] != '\0')
 	{
 		stack->stack_a[j] = ft_atoi(av[i]);
 		i++;
@@ -55,7 +55,7 @@ int main (int ac, char **av)
 		j++;
 	}
 	
-	pa(stack);
+	/*pb(stack);
 	j = 0;
 	printf("\n");
 	printf("\n");
@@ -74,5 +74,6 @@ int main (int ac, char **av)
 		j++;
 	}
 	printf("\n");
+	*/
 	return (0);
 }
