@@ -17,7 +17,7 @@ int	pa(t_stack *stack)
 	int i;
 
 	i = stack->current_a;
-	if(stack->current_a == 0)
+	if(stack->current_b == 0)
 		return (0);
 	while(i > 0)
 	{
@@ -41,6 +41,8 @@ int	pb(t_stack *stack)
 	int i;
 
 	i = stack->current_b;
+	if(stack->current_a == 0)
+		return (0);
 	while(i > 0)
 	{
 		stack->stack_b[i] = stack->stack_b[i - 1];

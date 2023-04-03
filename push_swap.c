@@ -55,7 +55,7 @@ int main (int ac, char **av)
 		j++;
 	}
 	
-	pa(stack);
+	pb(stack);
 	j = 0;
 	printf("\n");
 	printf("\n");
@@ -77,5 +77,3 @@ int main (int ac, char **av)
 	
 	return (0);
 }
-
-test
