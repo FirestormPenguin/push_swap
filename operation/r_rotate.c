@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   r_rotate.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 08:05:36 by marvin            #+#    #+#             */
-/*   Updated: 2023/04/03 08:05:36 by marvin           ###   ########.fr       */
+/*   Updated: 2023/04/04 16:05:01 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,5 @@ int rrr(t_stack *stack)
 {
     rra(stack);
     rrb(stack);
+    return (0);
 }
