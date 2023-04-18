@@ -11,17 +11,23 @@ typedef struct s_stack {
 	int	current_b;
 }		t_stack;
 
-int		ft_atoi(const char *str);
-int		ft_count_av(char **str);
-int		print_stack(t_stack *stack);
 int		sa(t_stack *stack);
 int		sb(t_stack *stack);
 int		ss(t_stack *stack);
+
 int		pa(t_stack *stack);
 int		pb(t_stack *stack);
+
 int		ra(t_stack *stack);
 int		rb(t_stack *stack);
 int		rr(t_stack *stack);
+
 int		rra(t_stack *stack);
 int		rrb(t_stack *stack);
 int		rrr(t_stack *stack);
+
+int		ft_atoi(const char *str);
+int		ft_count_av(char **str);
+int		print_stack(t_stack *stack);
+
+int		sort3(t_stack *stack);

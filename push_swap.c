@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 06:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2023/04/04 16:39:08 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/04/18 17:12:33 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,9 @@ int main (int ac, char **av)
 		i++;
 		j++;
 	}
+	print_stack(stack);
+	if (stack->count_a == 3)
+		sort3(stack);
 	print_stack(stack);
 	return (0);
 }
