@@ -30,4 +30,4 @@ int		ft_atoi(const char *str);
 int		ft_count_av(char **str);
 int		print_stack(t_stack *stack);
 
-int		sort3(t_stack *stack);
+void		sort3(t_stack *stack);
