@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   move.c                                             :+:      :+:    :+:   */
+/*   sort_small_stack.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 18:19:30 by egiubell          #+#    #+#             */
-/*   Updated: 2023/04/20 17:47:26 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/04/20 18:48:21 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,29 @@
 
 int	find_sort3(t_stack *stack)
 {
-	int	i;
-	int ret;
+	int	result;
 
-	i = 0;
-	ret = 0;
+	result = 0;
 	if (stack->stack_a[0] > stack->stack_a[1]
 		&& stack->stack_a[1] < stack->stack_a[2])
 	{
 		if (stack->stack_a[2] > stack->stack_a[0])
-			ret = 1;
+			result = 1;
 		else
-			ret = 3;
-	} 
+			result = 3;
+	}
 	else if (stack->stack_a[0] > stack->stack_a[1]
 		&& stack->stack_a[1] > stack->stack_a[2])
-			ret = 2;
+			result = 2;
 	else if (stack->stack_a[0] < stack->stack_a[1]
 		&& stack->stack_a[1] > stack->stack_a[2])
 	{
 		if (stack->stack_a[2] < stack->stack_a[0])
-			ret = 5;
+			result = 5;
 		else
-			ret = 4;
+			result = 4;
 	}
-	return (ret);
+	return(result);
 }
 
 void	sort3(t_stack *stack)
@@ -59,4 +57,45 @@ void	sort3(t_stack *stack)
 	}
 	else if (find_sort3(stack) == 5)
 		rra(stack);
+}
+
+void final_sort5(t_stack *stack)
+{
+	if (stack->stack_a[0] > stack->stack_a[1])
+		
+}
+
+void sort5(t_stack *stack)
+{
+	int	i;
+	int	j;
+	
+	j = 0;
+	i = stack->current_a;
+	while (i > 3)
+	{
+		pb(stack);
+		i--;
+		j++;
+	}
+	sort3(stack);
+	while (j > 0)
+	{
+		pa(stack);
+		j--;
+	}
+	final_sort5(stack);
+}
+
+void sort_small_stack(t_stack *stack)
+{
+	if (stack->current_a == 2)
+	{
+		if (stack->stack_a[0] > stack->stack_a[1])
+			sa(stack);
+	}
+	else if (stack->current_a == 3)
+		sort3(stack);
+	else if (stack->current_a <= 5)
+		sort5(stack);
 }

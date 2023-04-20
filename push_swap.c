@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 06:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2023/04/18 17:12:33 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/04/20 18:33:34 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int main (int ac, char **av)
 	
 	if(ac <= 2)
 	{
+		printf("Numeri non sufficienti\n");
 		return (0);
 	}
 	stack->stack_a = (int *)malloc(sizeof(int) * stack->count_a);
@@ -40,8 +41,8 @@ int main (int ac, char **av)
 		j++;
 	}
 	print_stack(stack);
-	if (stack->count_a == 3)
-		sort3(stack);
+	if (stack->count_a <= 5)
+		sort_small_stack(stack);
 	print_stack(stack);
 	return (0);
 }
