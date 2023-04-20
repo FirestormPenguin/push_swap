@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 18:19:30 by egiubell          #+#    #+#             */
-/*   Updated: 2023/04/20 18:48:21 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/04/20 18:49:10 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,9 @@ void	sort3(t_stack *stack)
 void final_sort5(t_stack *stack)
 {
 	if (stack->stack_a[0] > stack->stack_a[1])
+	{
 		
+	}
 }
 
 void sort5(t_stack *stack)
