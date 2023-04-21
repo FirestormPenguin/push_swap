@@ -51,5 +51,5 @@ int main (int ac, char **av)
 	print_stack(stack);
 	return (0);
 
-	check
+	ch
 }
