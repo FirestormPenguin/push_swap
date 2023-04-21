@@ -34,7 +34,7 @@ int main (int ac, char **av)
 	stack->stack_b = (int *)malloc(sizeof(int) * stack->count_a);
 	stack->current_a = stack->count_a;
 	stack->current_b = 0;
-	while(av[i] != '\0') 
+	while(av[i] != '\0')
 	{
 		stack->stack_a[j] = ft_atoi(av[i]);
 		i++;
