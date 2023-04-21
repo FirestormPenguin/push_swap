@@ -50,6 +50,4 @@ int main (int ac, char **av)
 		sort_small_stack(stack);
 	print_stack(stack);
 	return (0);
-
-	ch
 }
