@@ -4,7 +4,7 @@ SRCS	=	push_swap.c utils.c sort_small_stack.c sort_big_stack.c checks.c operatio
 
 OBJS	=	$(SRCS:.c=.o)
 
-CCFLAGS	=	gcc -Wall -Wextra -Werror
+CCFLAGS	=	gcc -Wall -Wextra -Werror -g
 RM		=	rm -f
 
 $(NAME): 

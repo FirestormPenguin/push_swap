@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 16:33:37 by egiubell          #+#    #+#             */
-/*   Updated: 2023/04/28 18:03:43 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/04/28 18:34:28 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void push_to_b(t_stack *stack, int i)
 					pb(stack);
 			}
 		}
+	return;
 }
 
 void sort_big_stack(t_stack *stack)
