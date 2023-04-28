@@ -35,4 +35,6 @@ int 	stack_A_is_sorted(t_stack *stack);
 void	sort_small_stack(t_stack *stack);
 void	sort3(t_stack *stack);
 int		find_sort3(t_stack *stack);
-void	sort_stack(t_stack *stack);
+void	sort_big_stack(t_stack *stack);
+void push_to_b(t_stack *stack, int i);
+int	check_pos(t_stack *stack, int i);
