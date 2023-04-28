@@ -30,9 +30,9 @@ int		ft_atoi(const char *str);
 int		ft_count_av(char **str);
 int		print_stack(t_stack *stack);
 
-int stack_A_is_sorted(t_stack *stack);
+int 	stack_A_is_sorted(t_stack *stack);
 
 void	sort_small_stack(t_stack *stack);
 void	sort3(t_stack *stack);
 int		find_sort3(t_stack *stack);
-void	sort5(t_stack *stack);
+void	sort_stack(t_stack *stack);
