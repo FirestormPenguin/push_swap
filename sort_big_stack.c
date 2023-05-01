@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 16:33:37 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/01 17:28:29 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/01 17:58:30 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@ void find_min_a(t_stack *stack)
 			}
 		}
 		if (j == stack->current_a - 1)
+		{
 			stack->min_a = i;
+			return;
+		}
 		i++;
 		j = 0;
 	}
@@ -46,30 +49,26 @@ void push_to_b(t_stack *stack)
 	{			
 		while (stack->stack_a[0] != n)
 		{
-				ra(stack);
-			}
-			if (stack->stack_a[0] == n)
-				pb(stack);
+			ra(stack);
 		}
-		else if (n > stack->current_a / 2)
+		pb(stack);
+		}
+	else if (n > stack->current_a / 2)
+	{
+		while (stack->stack_a[0] != n)
 		{
-			while (stack->stack_a[0] != n)
-			{
-				rra(stack);
-			}
-			if (stack->stack_a[0] == n)
-				pb(stack);
+			rra(stack);
 		}
+		pb(stack);
+	}
 }
 
 void sort_big_stack(t_stack *stack)
 {
-	int	i;
-
-	i = 0;
-	find_min_a(stack);
-	while (i <= stack->current_a - 1)
+	while (stack->current_a > 3)
 	{
+		find_min_a(stack);
 		push_to_b(stack);
 	}
+	sort_small_stack(stack);
 }
