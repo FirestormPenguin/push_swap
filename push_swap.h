@@ -9,6 +9,7 @@ typedef struct s_stack {
 	int	count_b;
 	int	current_a;
 	int	current_b;
+	int	min_a;
 }		t_stack;
 
 int		sa(t_stack *stack);
@@ -36,5 +37,5 @@ void	sort_small_stack(t_stack *stack);
 void	sort3(t_stack *stack);
 int		find_sort3(t_stack *stack);
 void	sort_big_stack(t_stack *stack);
-void push_to_b(t_stack *stack, int i);
-int	check_pos(t_stack *stack, int i);
+void	push_to_b(t_stack *stack);
+void	find_min_a(t_stack *stack);
