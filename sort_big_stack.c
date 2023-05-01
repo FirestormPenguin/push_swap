@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 16:33:37 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/01 17:20:06 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/01 17:28:29 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void find_min_a(t_stack *stack)
 
 	i = 0;
 	j = 0;
-	while (i < stack->current_a - 1)
+	while (i <= stack->current_a - 1)
 	{
-		while (j < stack->current_a - 1)
+		while (j <= stack->current_a - 1)
 		{
 			if (stack->stack_a[i] <= stack->stack_a[j])
 				j++;
