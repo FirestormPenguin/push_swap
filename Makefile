@@ -6,15 +6,26 @@ OBJS	=	$(SRCS:.c=.o)
 
 CCFLAGS	=	gcc -Wall -Wextra -Werror
 RM		=	rm -f
+FT_PRINTF = ft_printf
+LIBRARY := ft_printf/libft/libft.a ft_printf/libftprintf.a
 
-$(NAME): 
-	$(CCFLAGS) $(SRCS) -o $(NAME)
+.o: .c
+	$(CCFLAGS) $(SRCS) -c $< -o  ${<:.c=.o}
+
+$(NAME):	$(OBJS)
+	make -C $(FT_PRINTF)
+	$(CCFLAGS) $(OBJS) $(LIBRARY) -o $(NAME)
 
 all:	$(NAME)
 
 clean:
-			$(RM) $(OBJS)
+		make clean -C $(FT_PRINTF)
+		$(RM) $(OBJS)
+
 fclean:	clean
-			$(RM) $(NAME)
+		make fclean -C $(FT_PRINTF)
+		$(RM) $(NAME)
+
 re:		fclean all
+
 .PHONY: all clean fclean re

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include "ft_printf/ft_printf.h"
 
 typedef struct s_stack {
 	int	*stack_a;
