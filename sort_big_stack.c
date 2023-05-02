@@ -6,13 +6,13 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 16:33:37 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/01 17:58:30 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/02 15:52:18 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void find_min_a(t_stack *stack)
+int find_min_a(t_stack *stack)
 {
 	int i;
 	int j;
@@ -30,22 +30,20 @@ void find_min_a(t_stack *stack)
 				break;
 			}
 		}
-		if (j == stack->current_a - 1)
-		{
-			stack->min_a = i;
-			return;
-		}
+		if (j == stack->current_a)
+			return (i);
 		i++;
 		j = 0;
 	}
+	return (-1);
 }
 
 void push_to_b(t_stack *stack)
 {
 	int	n;
-
-	n = stack->stack_a[stack->min_a];
-	if (n < stack->current_a / 2)
+	
+	n = stack->stack_a[find_min_a(stack)];
+	if (n <= stack->current_a / 2)
 	{			
 		while (stack->stack_a[0] != n)
 		{
@@ -67,8 +65,11 @@ void sort_big_stack(t_stack *stack)
 {
 	while (stack->current_a > 3)
 	{
-		find_min_a(stack);
 		push_to_b(stack);
 	}
-	sort_small_stack(stack);
+	sort_stack(stack);
+	while (stack->current_a != stack->count_a)
+	{
+		pa(stack);
+	}
 }

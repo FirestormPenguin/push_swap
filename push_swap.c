@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 06:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2023/04/27 16:52:49 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/02 15:51:33 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,7 @@ int main (int ac, char **av)
 		printf ("Already sorted\n");	
 		return (0);
 	}
-	if (stack->count_a <= 5)
-		sort_small_stack(stack);
+	sort_stack(stack);
 	print_stack(stack);
 	return (0);
 }
