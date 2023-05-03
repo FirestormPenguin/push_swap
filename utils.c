@@ -12,34 +12,7 @@
 
 #include "push_swap.h"
 
-int	ft_atoi(const char *str)
-{
-	int	i;
-	int	sign;
-	int	res;
-
-	i = 0;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
-		|| str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
-		i++;
-	sign = 1;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			sign *= -1;
-		i++;
-	}
-	res = 0;
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res *= 10;
-		res += str[i] - '0';
-		i++;
-	}
-	return (res * sign);
-}
-
-int	ft_count_av(char **str)
+int	count_av(char **str)
 {
 	int	i;
 
@@ -51,7 +24,7 @@ int	ft_count_av(char **str)
 	return (i-1);
 }
 
-int	print_stack(t_stack *stack)
+void	print_stack(t_stack *stack)
 {
 	int i;
 
@@ -71,5 +44,25 @@ int	print_stack(t_stack *stack)
 		i++;
 	}
 	printf("\n");
-	return (0);
+}
+
+void d_quotes(t_stack *stack, char *str)
+{
+	char	**s;
+	int		i;
+
+	i = 0;
+	s = (char **)malloc(sizeof(char *) * (count_split(str, ' ') + 1));
+	s = ft_split(str, ' ');
+	stack->count_a = count_av(s) + 1;
+	stack->count_b = stack->count_a;
+	stack->stack_a = (int *)malloc(sizeof(int) * stack->count_a);
+	stack->stack_b = (int *)malloc(sizeof(int) * stack->count_a);
+	stack->current_a = stack->count_a;
+	stack->current_b = 0;
+	while(s[i] != NULL)
+	{
+		stack->stack_a[i] = ft_atoi(s[i]);
+		i++;
+	}
 }

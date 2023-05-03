@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include "ft_printf/ft_printf.h"
+#include "ft_printf/libft.h"
 
 typedef struct s_stack {
 	int	*stack_a;
@@ -27,9 +28,9 @@ int		rra(t_stack *stack);
 int		rrb(t_stack *stack);
 int		rrr(t_stack *stack);
 
-int		ft_atoi(const char *str);
-int		ft_count_av(char **str);
-int		print_stack(t_stack *stack);
+int		count_av(char **str);
+void	print_stack(t_stack *stack);
+void	d_quotes(t_stack *stack, char *str);
 
 int 	stack_A_is_sorted(t_stack *stack);
 
