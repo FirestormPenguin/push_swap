@@ -29,21 +29,21 @@ void	print_stack(t_stack *stack)
 	int i;
 
 	i = 0;
-	printf("A: ");
+	ft_printf("A: ");
 	while(i < stack->current_a)
 	{
-		printf("%d ", stack->stack_a[i]);
+		ft_printf("%d ", stack->stack_a[i]);
 		i++;
 	}
-	printf("\n");
-	printf("B: ");
+	ft_printf("\n");
+	ft_printf("B: ");
 	i = 0;
 	while(i < stack->current_b)
 	{
-		printf("%d ",stack->stack_b[i]);
+		ft_printf("%d ",stack->stack_b[i]);
 		i++;
 	}
-	printf("\n");
+	ft_printf("\n");
 }
 
 void d_quotes(t_stack *stack, char *str)

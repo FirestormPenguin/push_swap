@@ -45,7 +45,6 @@ int main (int ac, char **av)
 	print_stack(stack);
 	if (stack_A_is_sorted(stack) == 1)
 	{
-		printf ("Already sorted\n");	
 		return (0);
 	}
 	sort_stack(stack);
