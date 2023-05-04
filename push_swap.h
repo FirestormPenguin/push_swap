@@ -36,6 +36,7 @@ void	d_quotes(t_stack *stack, char *str);
 int		checks_error(char **str);
 void	close_stacks(t_stack *stack);
 int		checks_int(char **str);
+void	checks_dup(t_stack *stack);
 
 void	sort_stack(t_stack *stack);
 void	sort3(t_stack *stack);
@@ -43,3 +44,5 @@ int		find_sort3(t_stack *stack);
 void	sort_big_stack(t_stack *stack);
 void	push_to_b(t_stack *stack);
 int		find_min_a(t_stack *stack);
+
+void	ft_error(t_stack *stack);

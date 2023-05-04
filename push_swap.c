@@ -6,11 +6,18 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 06:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/04 17:40:16 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/04 20:35:30 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	ft_error(t_stack *stack)
+{
+	write(2, "Error\n", 6);
+	close_stacks(stack);
+	exit(1);
+}
 
 int main (int ac, char **av)
 {
@@ -27,11 +34,7 @@ int main (int ac, char **av)
 	{
 		d_quotes(stack, av[1]);
 		if (checks_error(av) == 1)
-		{
-			ft_printf("Error\n");
-			close_stacks(stack);
-			return (0);
-		}
+			ft_error(stack);
 	}
 	else if (ac > 2)
 	{
@@ -41,19 +44,16 @@ int main (int ac, char **av)
 		stack->stack_b = (int *)malloc(sizeof(int) * stack->count_a);
 		stack->current_a = stack->count_a;
 		stack->current_b = 0;
-		if (checks_error(av) == 1)
-		{
-			ft_printf("Error\n");
-			close_stacks(stack);
-			return (0);
-		}
 		while(av[i] != NULL)
 		{
 			stack->stack_a[j] = ft_atoi(av[i]);
 			i++;
 			j++;
 		}
+		if (checks_error(av) == 1)
+			ft_error(stack);
 	}
+	checks_dup(stack);
 	print_stack(stack);
 	if (stack_A_is_sorted(stack) == 1)
 	{
