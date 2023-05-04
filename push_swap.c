@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 06:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/02 16:33:59 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:02:28 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@ int main (int ac, char **av)
 
 	i = 1;
 	j = 0;
+	if (checks_error(av) == 1)
+	{
+		ft_printf("Error\n");
+		return (0);
+	}
 	stack = (t_stack *)malloc(sizeof(t_stack));
 	if (ac < 2)
 		return (0);

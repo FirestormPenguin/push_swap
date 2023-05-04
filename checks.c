@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 18:56:24 by egiubell          #+#    #+#             */
-/*   Updated: 2023/04/20 19:18:02 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:02:36 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,9 @@ int stack_A_is_sorted (t_stack *stack)
 	{
 		return (0);
 	}
+}
+
+int	checks_error(char **str)
+{
+	
 }
