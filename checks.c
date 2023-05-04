@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 18:56:24 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/04 17:36:50 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/04 18:12:31 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,41 @@ int checks_int(char **str)
 	return (0);
 }
 
+int	checks_max_int(char **str)
+{
+	return (0);
+}
+
+int	checks_dup(char **str)
+{
+	int	i;
+	int	j;
+
+	i = 1;
+	j = 2;
+	while (str[i] != NULL)
+	{
+		if (str[j] == NULL)
+			break;
+		while (str[j] != NULL)
+		{
+			if (str[i] == str[j])
+				return (1);
+			j++;
+		}
+		i++;
+		j = i + 1;
+	}
+	return (0);
+}
 
 int	checks_error(char **str)
 {
 	if (checks_int(str) == 1)
 		return (1);
-	
+	if (checks_max_int(str) == 1)
+		return (1);
+	if (checks_dup(str) == 1)
+		return (1);
 	return (0);
 }
