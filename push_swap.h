@@ -30,10 +30,12 @@ int		rrr(t_stack *stack);
 
 int		count_av(char **str);
 void	print_stack(t_stack *stack);
+int 	stack_A_is_sorted(t_stack *stack);
 void	d_quotes(t_stack *stack, char *str);
 
-int 	stack_A_is_sorted(t_stack *stack);
 int		checks_error(char **str);
+void	close_stacks(t_stack *stack);
+int		checks_int(char **str);
 
 void	sort_stack(t_stack *stack);
 void	sort3(t_stack *stack);

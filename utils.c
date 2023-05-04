@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:03:46 by egiubell          #+#    #+#             */
-/*   Updated: 2023/04/27 17:26:27 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/04 17:35:22 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,29 @@ void	print_stack(t_stack *stack)
 		i++;
 	}
 	ft_printf("\n");
+}
+
+int stack_A_is_sorted (t_stack *stack)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 1;
+	while (i < stack->current_a - 1)
+	{
+		if (stack->stack_a[i] < stack->stack_a[i + 1])
+			j++;
+		i++;
+	}
+	if (j == stack->current_a)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
 
 void d_quotes(t_stack *stack, char *str)
