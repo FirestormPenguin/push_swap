@@ -6,16 +6,16 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 16:33:37 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/02 15:52:18 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:47:36 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int find_min_a(t_stack *stack)
+int	find_min_a(t_stack *stack)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -27,7 +27,7 @@ int find_min_a(t_stack *stack)
 				j++;
 			else
 			{
-				break;
+				break ;
 			}
 		}
 		if (j == stack->current_a)
@@ -38,10 +38,10 @@ int find_min_a(t_stack *stack)
 	return (-1);
 }
 
-void push_to_b(t_stack *stack)
+void	push_to_b(t_stack *stack)
 {
 	int	n;
-	
+
 	n = stack->stack_a[find_min_a(stack)];
 	if (n <= stack->current_a / 2)
 	{			
@@ -50,7 +50,7 @@ void push_to_b(t_stack *stack)
 			ra(stack);
 		}
 		pb(stack);
-		}
+	}
 	else if (n > stack->current_a / 2)
 	{
 		while (stack->stack_a[0] != n)
@@ -61,7 +61,7 @@ void push_to_b(t_stack *stack)
 	}
 }
 
-void sort_big_stack(t_stack *stack)
+void	sort_big_stack(t_stack *stack)
 {
 	while (stack->current_a > 3)
 	{

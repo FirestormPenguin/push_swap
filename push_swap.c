@@ -6,52 +6,33 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 06:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/05 18:23:55 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:47:14 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main (int ac, char **av)
+int	main(int ac, char **av)
 {
-	t_stack		*stack;\
-	int	i;
-	int	j;
+	t_stack	*stack;
 
-	i = 1;
-	j = 0;
 	stack = (t_stack *)malloc(sizeof(t_stack));
 	if (ac < 2)
 		return (0);
-	else if(ac == 2)
+	else if (ac == 2)
 	{
 		d_quotes(stack, av[1]);
 	}
 	else if (ac > 2)
 	{
-		stack->count_a = count_av(av);
-		stack->count_b = stack->count_a;
-		stack->stack_a = (int *)malloc(sizeof(int) * stack->count_a);
-		stack->stack_b = (int *)malloc(sizeof(int) * stack->count_a);
-		stack->current_a = stack->count_a;
-		stack->current_b = 0;
-		while(av[i] != NULL)
-		{
-			stack->stack_a[j] = ft_atoi(av[i]);
-			i++;
-			j++;
-		}
-		checks_int(av, stack);
-		checks_max_int(av, stack);
+		ft_malloc_stack(stack, av);
 	}
 	checks_dup(stack);
-	//print_stack(stack);
 	if (stack_A_is_sorted(stack) == 1)
 	{
 		return (0);
 	}
 	sort_stack(stack);
-	//print_stack(stack);
 	close_stacks(stack);
 	return (0);
 }
