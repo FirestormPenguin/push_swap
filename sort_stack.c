@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 18:19:30 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/04 17:23:14 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:56:11 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	find_sort3(t_stack *stack)
 		else
 			result = 4;
 	}
-	return(result);
+	return (result);
 }
 
 void	sort3(t_stack *stack)
@@ -59,7 +59,7 @@ void	sort3(t_stack *stack)
 		rra(stack);
 }
 
-void sort_stack(t_stack *stack)
+void	sort_stack(t_stack *stack)
 {
 	if (stack->current_a == 2)
 	{

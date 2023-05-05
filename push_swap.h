@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 18:43:59 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/05 18:44:31 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:54:54 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int		rrr(t_stack *stack);
 
 int		count_av(char **str);
 void	print_stack(t_stack *stack);
-int 	stack_A_is_sorted(t_stack *stack);
+int 	stack_a_is_sorted(t_stack *stack);
 void	ft_malloc_stack(t_stack *stack, char **str);
 void	d_quotes(t_stack *stack, char *str);
 

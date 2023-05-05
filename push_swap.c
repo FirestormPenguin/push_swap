@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 06:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/05 18:47:14 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:55:01 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int ac, char **av)
 		ft_malloc_stack(stack, av);
 	}
 	checks_dup(stack);
-	if (stack_A_is_sorted(stack) == 1)
+	if (stack_a_is_sorted(stack) == 1)
 	{
 		return (0);
 	}
