@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 16:59:42 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/04 20:32:42 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/05 16:59:30 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ long long	ft_atoi(const char *str)
 {
 	long long	i;
 	long long	number;
-	int		sign;
+	int			sign;
 
 	i = 0;
 	number = 0;

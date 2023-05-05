@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:03:46 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/04 17:35:22 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/05 16:51:31 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	count_av(char **str)
 	return (i-1);
 }
 
-void	print_stack(t_stack *stack)
+void print_stack(t_stack *stack)
 {
 	int i;
 
