@@ -6,15 +6,18 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 18:43:59 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/05 18:54:54 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/05 19:02:23 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include "ft_printf/ft_printf.h"
-#include "ft_printf/libft.h"
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
+
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include "ft_printf/ft_printf.h"
+# include "ft_printf/libft.h"
 
 typedef struct s_stack {
 	int	*stack_a;
@@ -42,7 +45,7 @@ int		rrr(t_stack *stack);
 
 int		count_av(char **str);
 void	print_stack(t_stack *stack);
-int 	stack_a_is_sorted(t_stack *stack);
+int		stack_a_is_sorted(t_stack *stack);
 void	ft_malloc_stack(t_stack *stack, char **str);
 void	d_quotes(t_stack *stack, char *str);
 
@@ -58,3 +61,5 @@ int		find_sort3(t_stack *stack);
 void	sort_big_stack(t_stack *stack);
 void	push_to_b(t_stack *stack);
 int		find_min_a(t_stack *stack);
+
+#endif
