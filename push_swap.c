@@ -6,18 +6,11 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 06:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/05 17:35:06 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:15:13 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	ft_error(t_stack *stack)
-{
-	write(2, "Error\n", 6);
-	close_stacks(stack);
-	exit(1);
-}
 
 int main (int ac, char **av)
 {
@@ -33,8 +26,6 @@ int main (int ac, char **av)
 	else if(ac == 2)
 	{
 		d_quotes(stack, av[1]);
-		if (checks_error(av) == 1)
-			ft_error(stack);
 	}
 	else if (ac > 2)
 	{
@@ -50,8 +41,8 @@ int main (int ac, char **av)
 			i++;
 			j++;
 		}
-		if (checks_error(av) == 1)
-			ft_error(stack);
+		checks_int(av, stack);
+		checks_max_int(av, stack);
 	}
 	checks_dup(stack);
 	print_stack(stack);
