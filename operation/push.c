@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 19:23:41 by egiubell          #+#    #+#             */
-/*   Updated: 2023/04/18 17:08:20 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:22:43 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int	pa(t_stack *stack)
 	}
 	stack->current_b--;
 	stack->current_a++;
+	ft_printf("pa\n");
 	return (0);
 }
 
@@ -57,5 +58,6 @@ int	pb(t_stack *stack)
 	}
 	stack->current_a--;
 	stack->current_b++;
+	ft_printf("pb\n");
 	return (0);
 }

@@ -6,11 +6,21 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 08:05:36 by marvin            #+#    #+#             */
-/*   Updated: 2023/04/18 17:08:31 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:21:26 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+void print_log_rr(int n)
+{
+    if (n == 1)
+        ft_printf("rra\n");
+    else if (n == 2)
+        ft_printf("rrb\n");
+    else if (n == 3)
+        ft_printf("rrr\n");
+}
 
 int rra(t_stack *stack)
 {
@@ -25,6 +35,7 @@ int rra(t_stack *stack)
         i--;
     }
     stack->stack_a[i] = n;
+    print_log_rr(1);
     return (0);
 }
 
@@ -42,11 +53,13 @@ int rrb(t_stack *stack)
     }
     stack->stack_b[i] = n;
     return (0);
+    print_log_rr(2);
 }
 
 int rrr(t_stack *stack)
 {
     rra(stack);
     rrb(stack);
+    print_log_rr(3);
     return (0);
 }
