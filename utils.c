@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:03:46 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/05 18:54:47 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/08 16:21:45 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,12 @@ int	stack_a_is_sorted(t_stack *stack)
 
 void	ft_malloc_stack(t_stack *stack, char **str)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 1;
 	j = 0;
-	stack->count_a = count_av(str) + 1;
+	stack->count_a = count_av(str);
 	stack->count_b = stack->count_a;
 	stack->stack_a = (int *)malloc(sizeof(int) * stack->count_a);
 	stack->stack_b = (int *)malloc(sizeof(int) * stack->count_a);
@@ -84,8 +84,8 @@ void	ft_malloc_stack(t_stack *stack, char **str)
 		i++;
 		j++;
 	}
-	checks_int(str, stack);
-	checks_max_int(str, stack);
+	checks_int_av(str, stack);
+	checks_max_int_av(str, stack);
 }
 
 void	d_quotes(t_stack *stack, char *str)

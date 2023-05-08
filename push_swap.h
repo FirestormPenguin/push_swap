@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 18:43:59 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/05 19:02:23 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/08 16:22:28 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,11 @@ void	d_quotes(t_stack *stack, char *str);
 
 void	close_stacks(t_stack *stack);
 void	ft_error(t_stack *stack);
+
 void	checks_max_int(char **str, t_stack *stack);
+void	checks_int_av(char **str, t_stack *stack);
 void	checks_int(char **str, t_stack *stack);
+void	checks_max_int_av(char **str, t_stack *stack);
 void	checks_dup(t_stack *stack);
 
 void	sort_stack(t_stack *stack);

@@ -6,11 +6,25 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 06:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/05 18:55:01 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/08 16:20:21 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	close_stacks(t_stack *stack)
+{
+	free(stack->stack_a);
+	free(stack->stack_b);
+	free(stack);
+}
+
+void	ft_error(t_stack *stack)
+{
+	write(2, "Error\n", 6);
+	close_stacks(stack);
+	exit(1);
+}
 
 int	main(int ac, char **av)
 {
