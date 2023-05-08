@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 16:34:22 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/04 15:51:32 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/08 18:36:34 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,6 @@ char	**ft_split(char const *s, char c)
 		else
 			s++;
 	}
-	split[i] = 0;
+	split[i] = NULL;
 	return (split);
 }
