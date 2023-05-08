@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:03:46 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/08 16:21:45 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/08 17:34:54 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,11 @@ void	d_quotes(t_stack *stack, char *str)
 	int		i;
 
 	i = 0;
+	if (count_split(str, ' ') == 0)
+	{
+		free(stack);
+		exit (0);
+	}
 	s = (char **)malloc(sizeof(char *) * (count_split(str, ' ') + 1));
 	s = ft_split(str, ' ');
 	stack->count_a = count_av(s) + 1;
@@ -109,4 +114,5 @@ void	d_quotes(t_stack *stack, char *str)
 	}
 	checks_int(s, stack);
 	checks_max_int(s, stack);
+	free(s);
 }

@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 06:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/08 16:20:21 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/08 17:28:33 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,10 @@ int	main(int ac, char **av)
 
 	stack = (t_stack *)malloc(sizeof(t_stack));
 	if (ac < 2)
+	{
+		free(stack);
 		return (0);
+	}
 	else if (ac == 2)
 	{
 		d_quotes(stack, av[1]);
@@ -44,6 +47,7 @@ int	main(int ac, char **av)
 	checks_dup(stack);
 	if (stack_a_is_sorted(stack) == 1)
 	{
+		close_stacks(stack);
 		return (0);
 	}
 	sort_stack(stack);
