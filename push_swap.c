@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 06:26:55 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/08 18:19:01 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/09 15:50:22 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	close_stacks(t_stack *stack)
 	free(stack->stack_a);
 	free(stack->stack_b);
 	free(stack);
-	exit(1);
 }
 
 void	ft_error(t_stack *stack)
@@ -49,6 +48,7 @@ int	main(int ac, char **av)
 	if (stack_a_is_sorted(stack) == 1)
 	{
 		close_stacks(stack);
+		return (0);
 	}
 	sort_stack(stack);
 	close_stacks(stack);
