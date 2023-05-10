@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 18:43:59 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/08 16:22:28 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/05/10 18:28:33 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,7 @@ int		find_sort3(t_stack *stack);
 void	sort_big_stack(t_stack *stack);
 void	push_to_b(t_stack *stack);
 int		find_min_a(t_stack *stack);
+
+void	sort_big_stack2(t_stack *stack);
 
 #endif
