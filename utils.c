@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "./mini-libft/libft.h"
 
 int	count_av(char **str)
 {
@@ -29,21 +30,21 @@ void	print_stack(t_stack *stack)
 	int	i;
 
 	i = 0;
-	ft_printf("A: ");
+	printf("A: ");
 	while (i < stack->current_a)
 	{
-		ft_printf("%d ", stack->stack_a[i]);
+		printf("%d ", stack->stack_a[i]);
 		i++;
 	}
-	ft_printf("\n");
-	ft_printf("B: ");
+	printf("\n");
+	printf("B: ");
 	i = 0;
 	while (i < stack->current_b)
 	{
-		ft_printf ("%d ", stack->stack_b[i]);
+		printf ("%d ", stack->stack_b[i]);
 		i++;
 	}
-	ft_printf("\n");
+	printf("\n");
 }
 
 int	stack_a_is_sorted(t_stack *stack)

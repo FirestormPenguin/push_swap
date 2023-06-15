@@ -16,8 +16,9 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "ft_printf/ft_printf.h"
-# include "ft_printf/libft.h"
+# include "./mini-libft/libft.h"
+# include "./mini-libft/ft_printf/ft_printf.h"
+# include "./mini-libft/get_next_line/get_next_line.h"
 
 typedef struct s_stack {
 	int	*stack_a;
@@ -64,6 +65,7 @@ int		find_sort3(t_stack *stack);
 void	sort_big_stack(t_stack *stack);
 void	push_to_b(t_stack *stack);
 int		find_min_a(t_stack *stack);
+int		find_min_b(t_stack *stack);
 
 void	sort_big_stack2(t_stack *stack);
 

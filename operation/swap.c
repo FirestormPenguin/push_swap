@@ -15,11 +15,11 @@
 void	print_log_s(int n)
 {
 	if (n == 1)
-		ft_printf("sa\n");
+		printf("sa\n");
 	else if (n == 2)
-		ft_printf("sb\n");
+		printf("sb\n");
 	else if (n == 3)
-		ft_printf("ss\n");
+		printf("ss\n");
 }
 
 int	sa(t_stack *stack)

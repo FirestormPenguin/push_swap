@@ -33,7 +33,7 @@ int	pa(t_stack *stack)
 	}
 	stack->current_b--;
 	stack->current_a++;
-	ft_printf("pa\n");
+	printf("pa\n");
 	return (0);
 }
 
@@ -58,6 +58,6 @@ int	pb(t_stack *stack)
 	}
 	stack->current_a--;
 	stack->current_b++;
-	ft_printf("pb\n");
+	printf("pb\n");
 	return (0);
 }

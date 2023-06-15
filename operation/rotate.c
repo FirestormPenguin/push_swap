@@ -15,11 +15,11 @@
 void	print_log_r(int n)
 {
 	if (n == 1)
-		ft_printf("ra\n");
+		printf("ra\n");
 	else if (n == 2)
-		ft_printf("rb\n");
+		printf("rb\n");
 	else if (n == 3)
-		ft_printf("rr\n");
+		printf("rr\n");
 }
 
 int	ra(t_stack *stack)

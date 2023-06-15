@@ -12,6 +12,22 @@
 
 #include "push_swap.h"
 
+int	find_min_b(t_stack *stack)
+{
+	int	i;
+	int	min_index;
+
+	i = 0;
+	min_index = 0;
+	while (i < stack->current_b)
+	{
+		if (stack->stack_b[i] < stack->stack_b[min_index])
+			min_index = i;
+		i++;
+	}
+	return (min_index);
+}
+
 int	find_min_a(t_stack *stack)
 {
 	int	i;
@@ -38,28 +54,28 @@ int	find_min_a(t_stack *stack)
 	return (-1);
 }
 
-void	push_to_b(t_stack *stack)
-{
-	int	n;
+// void	push_to_b(t_stack *stack)
+// {
+// 	int	n;
 
-	n = stack->stack_a[find_min_a(stack)];
-	if (n <= stack->current_a / 2)
-	{			
-		while (stack->stack_a[0] != n)
-		{
-			ra(stack);
-		}
-		pb(stack);
-	}
-	else if (n > stack->current_a / 2)
-	{
-		while (stack->stack_a[0] != n)
-		{
-			rra(stack);
-		}
-		pb(stack);
-	}
-}
+// 	n = stack->stack_a[find_min_a(stack)];
+// 	if (n <= stack->current_a / 2)
+// 	{			
+// 		while (stack->stack_a[0] != n)
+// 		{
+// 			ra(stack);
+// 		}
+// 		pb(stack);
+// 	}
+// 	else if (n > stack->current_a / 2)
+// 	{
+// 		while (stack->stack_a[0] != n)
+// 		{
+// 			rra(stack);
+// 		}
+// 		pb(stack);
+// 	}
+// }
 
 void	sort_big_stack(t_stack *stack)
 {
