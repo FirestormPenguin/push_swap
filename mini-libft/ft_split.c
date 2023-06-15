@@ -6,11 +6,11 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 16:34:22 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/08 18:36:34 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/06/15 13:39:36 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./../push_swap.h"
 
 int	count_split(char const *str, char c)
 {

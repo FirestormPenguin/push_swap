@@ -6,12 +6,11 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:03:46 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/08 19:19:08 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/06/15 13:51:47 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "./mini-libft/libft.h"
 
 int	count_av(char **str)
 {

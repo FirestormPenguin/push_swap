@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mivendit <mivendit@student.42.fr>          +#+  +:+       +#+        */
+/*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/24 11:51:16 by mivendit          #+#    #+#             */
-/*   Updated: 2023/04/24 11:51:17 by mivendit         ###   ########.fr       */
+/*   Created: 2023/01/20 13:39:00 by egiubell          #+#    #+#             */
+/*   Updated: 2023/06/15 13:46:20 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./../push_swap.h"
 
-void	ft_strdel(char **as)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	if (as == 0)
-		return ;
-	if (*as != 0)
+	size_t	i;
+
+	i = 0;
+	if (dstsize > 0)
 	{
-		free(*as);
-		*as = 0;
+		while (src[i] && i < (dstsize -1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = 0;
 	}
+	while (src[i])
+		i++;
+	return (i);
 }

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mivendit <mivendit@student.42.fr>          +#+  +:+       +#+        */
+/*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 11:50:20 by mivendit          #+#    #+#             */
-/*   Updated: 2023/04/24 11:50:21 by mivendit         ###   ########.fr       */
+/*   Updated: 2023/06/15 13:54:06 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./../push_swap.h"
 
 int	ft_check_num(const char *string)
 {

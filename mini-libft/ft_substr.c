@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/24 11:51:18 by mivendit          #+#    #+#             */
-/*   Updated: 2023/06/15 13:57:57 by egiubell         ###   ########.fr       */
+/*   Created: 2023/01/30 15:13:30 by egiubell          #+#    #+#             */
+/*   Updated: 2023/06/15 13:45:09 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../push_swap.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char	*us1;
-	unsigned char	*us2;
+	char		*str;
 
-	us1 = (unsigned char *)s1;
-	us2 = (unsigned char *)s2;
-	if (!(*s1) && !(*s2))
-		return (0);
-	else
-	{
-		while (*us1 || *us2)
-		{
-			if (*us1 != *us2)
-				return (*us1 - *us2);
-			us1++;
-			us2++;
-		}
-	}
-	return (0);
+	if (!s)
+		return (NULL);
+	if (ft_strlen(s) < start)
+		len = 0;
+	if (ft_strlen(s + start) < len)
+		len = ft_strlen(s + start);
+	str = malloc (sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	ft_strlcpy(str, s + start, len + 1);
+	return (str);
 }

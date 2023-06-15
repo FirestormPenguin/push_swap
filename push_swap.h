@@ -6,7 +6,7 @@
 /*   By: egiubell <egiubell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 18:43:59 by egiubell          #+#    #+#             */
-/*   Updated: 2023/05/10 18:28:33 by egiubell         ###   ########.fr       */
+/*   Updated: 2023/06/15 13:58:13 by egiubell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "./mini-libft/libft.h"
-# include "./mini-libft/ft_printf/ft_printf.h"
-# include "./mini-libft/get_next_line/get_next_line.h"
+# include "./ft_printf/ft_printf.h"
 
 typedef struct s_stack {
 	int	*stack_a;
@@ -68,5 +66,12 @@ int		find_min_a(t_stack *stack);
 int		find_min_b(t_stack *stack);
 
 void	sort_big_stack2(t_stack *stack);
+
+int		ft_atoi(const char *str);
+char	**ft_split(char const *s, char c);
+int		ft_strcmp(const char *s1, const char *s2);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlen(const char *s);
 
 #endif
